@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+    </head>
+    <body>
+        <div>
+            <h3>Obteniendo la fecha y hora en tiempo real</h3>
+            <script src="app.js"></script>
+
+            <!--Este es un boton que solo muestra la fecha y la hora actual
+            La order Date() recupera la hora y la fecha actual, y se obtiene al momento de dar click al boton-->
+            <button type="button" onclick="document.getElementById('fecha').innerHTML = Date()">Fecha y Hora</button>
+            <p id="fecha"></p>
+        </div>   
+  
+        <div>
+            <h3>Cambio de Texto</h3>
+            <!--Este boton cambia el texto
+            Al momento de dar clic  el texto lo cambiamos por otro que le asignamos-->
+            <button type="button" onclick='document.getElementById("demo").innerHTML = "Hola mundo";'>Cambio de texto</button>
+            <p id="demo">Esto es Javascript</p>
+        </div>
+
+        <div>
+            <h3>Modificacion de los estilos css</h3>
+            <!--Cambia el estilo css
+            Al darle clic al boton la propiedad css que nosotros indicamos cambia, en esta ocacion cambia el tamaño de las letras-->
+            <p id="cambio">Puede Cambiar el estilo</p>
+            <button type="button" onclick="document.getElementById('cambio').style.fontSize='60px';">Cambiar</button>
+        </div>
+        <div>
+            <h1>Animaciones</h1>
+                <!--Con javascript podemos ocultar, añadir y hacer otras acciones o animaciones que veremos más adelante-->
+                <div>
+                    <h3>Ocultar elementos</h3>
+                    <!--Puede ocultar elemento y aparecer elementos-->
+                    <p id="ocultar">Me ocultare</p>
+                    <button type="button" onclick="document.getElementById('ocultar').style.display='none'">Ocultar elemento </button>
+                </div>
+            
+                <div>
+                    <h3>Agregar un elemento</h3>
+                    <!--Agrega un elemento -->
+                    <p id="Agregar" style="display: none;">Me agregaste</p>
+                    <button type="button" onclick="document.getElementById('Agregar').style.display='block'">Agregar elemento </button>
+                </div>
+        </div>
+        
+            <div> 
+                    <h3>Usando las etiquetas script</h3>
+                    <!--Para hacer codigo de javascript debemos hacerlo dentro de las etiquetas script-->
+                    <p id="texto"></p>
+                    <script>
+                        document.getElementById("texto").innerHTML = 
+                        "Texto usando la etiqueta script";
+                    </script>
+            </div>
+        
+
+        <div>
+            <h3>Usando funciones </h3>
+                <!--Funciones con javascript-->
+                <script>
+                    function cambio(){
+                        document.getElementById('texto2').innerHTML =
+                        "Texto cambiado por una funcion";
+                    }
+                </script>
+
+                <button type="button" onclick="cambio();">Cambiar</button>
+                <p id="texto2">Cambiaremos el texto a travez de una funcion en javascript</p>
+        </div>
+        
+        <div>
+            <h3>Mandando a llamar a una funcion desde un archivo externo</h3>
+                <!--Funcionamiento a traves de un archivo .js-->
+                <script src="funciones.js"></script>
+
+                <button type="button" onclick="texto();">Cambiar </button>
+                <p id="Texto3">Cambiaremos el texto desde un archivo externo</p>
+        </div>
+
+        <div>   
+            <h1>Formas de visualizar lo que hace javascript</h1>
+             <!--Posibilidades de visualizar js-->
+            <div>
+                <h3>Usando innerHTML</h3>
+                    <!--A traves de innerHTML-->
+                    <button type="button" onclick="visualizar();">innerHTML</button>
+                    <p id="texto4">Obtener el resultado de la suma de 5 + 6</p>
+            </div>
+
+            <div>
+                <h3>Usando .write</h3>
+                    <!--A traves de .write-->
+                    <button type="button" onclick=" document.write( 5 + 6 );">.write</button>
+            </div>
+
+            <div>
+                <h3>Usando una alerta</h3>
+                    <!--Usando una alerta-->
+                    <p>Cuando abres la pagina o recargas aparece la alerta  </p>
+                    <script>
+                        alert(5+6);
+                    </script>
+            </div>
+
+            <div>
+                <h3>Usando la consola </h3>
+                    <!--Usando la  consola-->
+                    <p>Nesecitas usan fn+12 para acceder a la consola de manera rapida</p>
+                    <script>
+                        console.log(5 + 6);
+                    </script>
+            </div>      
+        </div>
+        <div>
+            <h1>Usando variables </h1>
+                <div>
+                    <h3>Usando variables para hacer una operacion aritmetica</h3>
+                    <!--Declaraciones de js-->
+                    <p id="Suma"></p>
+                    <script>
+                        var x, y, z;
+                        x = 5;
+                        y = 6;
+                        z = x + y;
+
+                        document.getElementById("Suma").innerHTML =
+                        "El resultado de la suma de 5 + 6 es :" + z + ".";
+                    </script>
+                </div>
+                <div>
+                    <h3>Usando intrucciones agrupadas</h3>
+                    <!--Instrucciones agrupadas-->
+                    <button type="button" onclick="doble()">Doble Instruccion</button>
+                    <p id="doble1"></p>
+                    <p id="doble2"></p>
+                </div>
+                <div>
+                    <h3>Usando Operadores</h3>
+                    <!--Usando el operador +-->
+                    <button type="button" onclick="operador()">Nombre</button>
+                    <p id="nombre"></p>
+                </div>
+                <div>
+                    <!--Usando los operadores += 
+                    Lo que hace es poder concatenar una oracion--> 
+                    <p id="oracion"></p>
+                    <script>
+                        text1 = "Que buen día";
+                        text1 += "para salir contigo"; 
+                        document.getElementById('oracion').innerHTML =
+                        text1;
+                    </script>
+                </div>
+                    <!--Añadiendo un numero y un texto y regresando un texto-->
+                    <p id="texto5"></p>
+                    <script>
+                        var x = 5 + 5 ;         //Devuelve el resultado de una suma
+                        var y = "5";            //Concatena los dos numero 
+                        var z = "Hola" + 5;     //Concatena el numero a un texto 
+                        
+                        document.getElementById("texto5").innerHTML = 
+                        x + "<br>" + y + "<br>" + z;
+                </script>
+                    <h3>Operaciones Aritmeticas</h3>
+                    <!--Operaciones aritmeticas-->
+                    <p id="suma"></p>
+                    <script>
+                        var x = 100 + 50;
+                        document.getElementById("suma").innerHTML = x;
+                    </script>
+                <div>
+                    <h3>Valores asignados por variables y obteniendo resultado</h3>
+                    <!--Asignando valor a las variables para hecer operaciones aritmeticas -->
+                    <p id="resultado"></p>
+                    <Script>
+                        var x = 30;
+                        var y = 50;
+                        var z = x + y;
+                        document.getElementById("resultado").innerHTML = z;
+                    </Script>
+                </div>
+                <div>
+                    <h3>Utilizando variables dentro de operaciones</h3>
+                    <p id="resultado2"></p>
+                    <script>
+                        var a = 3;
+                        var y = (200 + 50) * a;
+                        document.getElementById("resultado2").innerHTML = y;
+                    </script>
+                </div>
+                <div>
+                    <h3>Operador ++</h3>
+                    <!--Este operador lo que hace es añadir o sumar 1 a un valor-->
+                    <p id="incremento"></p>
+                    <script>
+                        var x = 5;
+                        x++;
+                        var z = x;
+                        document.getElementById("incremento").innerHTML = z;
+                    </script>
+                </div>
+                <div>
+                    <h3>Operador --</h3>
+                    <!--Este operador disminuir o restar 1 a un valor -->
+                    <p id="restas"></p>
+                    <script>
+                        var x = 5;
+                        x--;
+                        var z = x;
+                        document.getElementById("restas").innerHTML = z;
+                    </script>
+                </div>
+                <div>
+                    <h3>Operador **</h3>
+                    <!--Este operador Multiplica el valor asignado, por otro-->
+                    <p id="multiplicacion"></p>
+                    <script>
+                        var x = 5;
+                        document.getElementById("multiplicacion").innerHTML = x ** 2;
+                    </script>
+                </div>
+                <div>
+                    <h3>math.pow()</h3>
+                    <!--Este da el mismo resultado que una multiplicacion.
+                    Solo acepta dos valores-->
+                    <p id="math"></p>
+                    <script>
+                        var x = 5;
+                        var y = Math.pow(x,2);
+                        document.getElementById("math").innerHTML = "Es una multiplicacion de 5 * 2 =" + y ;
+                    </script>
+                </div>
+                <div>
+                    <h2>Precedencia del operador</h2>
+                    <div>
+                        <!--Prioridad de las operaciones
+                        En la operacion se va a resolver por la prioridad de los operadores-->
+                        <p id="prioridad"></p>
+                        <script>
+                            var operacion = 100 + 50 * 3;
+                            document.getElementById("prioridad").innerHTML = "100 + 50 * 3 ="+ operacion ;
+                        </script>
+                    </div>
+                    <div>
+                        <p id="parentesis"></p>
+                        <script>
+                            var x = (100 + 50) * 3;
+                            document.getElementById("parentesis").innerHTML = "(100 + 50) * 3 ="+ x;
+                        </script>
+                    </div>
+                    <div>
+                        <p id="resta"></p>
+                        <script>
+                            var x = 100 + 50 - 3;
+                            document.getElementById("resta").innerHTML = "100 + 50 - 3 =" + x; 
+                        </script>
+                    </div>
+                    <div>
+                        <p id=""></p>
+                        <script>
+                            var x = 300 * 2;
+                            document.getElementById("")
+                        </script>
+                    </div>
+                    <div>
+                      <h3>Operadores de Comparación</h3>  
+                        <button type="button" onclick="comparacion()">Coparacion</button>
+                      
+                    </div>
+                    <div>
+                        <h3>Operadores logicos</h3>
+                        <button type="button" onclick="Logicos()">Logico</button>
+                    </div>
+                    <div>
+                        <h3>Operadores Bit</h3>
+                        <button type="button" onclick="bit()">BIT</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Operadores de Asignacion</h3>
+                    <button type="button" onclick="asignacion()">Asignacion</button>
+                </div>
+                <div>
+                    <h3>Operador miscelaneo</h3>
+                    <button type="button" onclick="miscelanio()">miselaneo</button>
+                    <h3>Ciclo if</h3>
+                    <button onclick="ciclos()">RE</button>
+                    <p id="resultado"></p>
+                    
+                </div>
+        </div>
+    </body>
+</html>
