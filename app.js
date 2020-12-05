@@ -1,7 +1,7 @@
 //Tipos de datos
-//"String" /*o*/'string'
+"String" /*o*/'string'
 12,1,23,3,4,5 //number
-true /*o*/ false //boolean
+true /*o*/ false //boolean 	
 ['josue','marta','miriam']//Array
 [1,2,3,4,5,6,7]
 [true,false,true,false]

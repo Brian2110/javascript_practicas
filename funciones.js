@@ -68,7 +68,7 @@ function ciclos(){
 
     var  acepto = '20';
     
-    if (acepto == 18)
+    if (acepto = 18)
     {
         document.getElementById('resultado').innerHTML = "El valor es mayor a 18";
     }
